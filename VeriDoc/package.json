@@ -1,0 +1,34 @@
+{
+  "name": "veridoc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run src && node --test server/*.test.mjs",
+    "server": "node --env-file-if-exists=.env server/index.mjs",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test:server": "node --test server/*.test.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.13",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "express": "^5.3.0",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.5.0",
+    "pdfjs-dist": "^6.4.299",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.35.5",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^5.0.5"
+  }
+}
